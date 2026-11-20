@@ -62,7 +62,6 @@ select = ["E", "F", "I", "UP", "B"]
 python_version = "3.12"
 strict = true
 mypy_path = "src"
-packages = ["engine", "config", "referral", "audit", "db", "web", "consent"]
 explicit_package_bases = true
 plugins = ["pydantic.mypy"]
 
