@@ -1,0 +1,35 @@
+{
+  "couple": {
+    "state": "at_risk",
+    "findings": [
+      {
+        "gene": "CFTR",
+        "lower_bound": false,
+        "recurrence_n": 25,
+        "recurrence_total": 100,
+        "recurrence_label": "1 in 4"
+      }
+    ],
+    "engine_version": "0.1.0",
+    "ruleset_version": "0.1.0",
+    "panel_incomplete": false
+  },
+  "counsellor": {
+    "state": "at_risk",
+    "findings": [
+      {
+        "gene": "CFTR",
+        "lower_bound": false,
+        "recurrence_n": 25,
+        "recurrence_total": 100,
+        "recurrence_label": "1 in 4"
+      }
+    ],
+    "notes": [],
+    "individual_findings": [],
+    "background_risk": null,
+    "background_risk_number": null,
+    "engine_version": "0.1.0",
+    "ruleset_version": "0.1.0"
+  }
+}
