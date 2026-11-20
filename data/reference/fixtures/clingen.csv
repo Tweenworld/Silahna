@@ -1,0 +1,6 @@
+gene_symbol,disease_label,moi,classification
+HBB,Beta-thalassemia,Autosomal recessive,Definitive
+CFTR,Cystic fibrosis,Autosomal recessive,Definitive
+GJB2,Autosomal recessive nonsyndromic sensorineural deafness,Autosomal recessive,Definitive
+PAH,Phenylketonuria,Autosomal recessive,Definitive
+SMN1,Spinal muscular atrophy,Autosomal recessive,Definitive

@@ -1,0 +1,6 @@
+VariationID	GeneSymbol	Name	ClinicalSignificance	ReviewStatus	Assembly
+15012	HBB	NM_000518.5(HBB):c.20A>T (p.Glu7Val)	Pathogenic	criteria provided, multiple submitters, no conflicts	GRCh38
+15013	HBB	NM_000518.5(HBB):c.93-21G>A	Pathogenic	criteria provided, multiple submitters, no conflicts	GRCh38
+7105	CFTR	NM_000492.4(CFTR):c.1521_1523delCTT (p.Phe508del)	Pathogenic	criteria provided, multiple submitters, no conflicts	GRCh38
+17001	GJB2	NM_004004.6(GJB2):c.35delG	Pathogenic	criteria provided, multiple submitters, no conflicts	GRCh38
+21002	PAH	NM_000277.3(PAH):c.1222C>T (p.Arg408Trp)	Pathogenic	criteria provided, multiple submitters, no conflicts	GRCh38

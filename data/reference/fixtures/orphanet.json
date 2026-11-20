@@ -1,0 +1,22 @@
+[
+  {
+    "orpha_code": "ORPHA:2312",
+    "name": "Beta-thalassemia",
+    "omim": "613985"
+  },
+  {
+    "orpha_code": "ORPHA:586",
+    "name": "Cystic fibrosis",
+    "omim": "219700"
+  },
+  {
+    "orpha_code": "ORPHA:716",
+    "name": "Phenylketonuria",
+    "omim": "261600"
+  },
+  {
+    "orpha_code": "ORPHA:83418",
+    "name": "Autosomal recessive nonsyndromic sensorineural deafness",
+    "omim": "220290"
+  }
+]

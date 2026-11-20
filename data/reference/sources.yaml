@@ -1,0 +1,62 @@
+# Public reference data sources manifest.
+# Used by refdata sync adapters to validate provenance, licences, and schemas.
+sources:
+  clinvar:
+    name: "NCBI ClinVar Variant Summary"
+    url: "https://ftp.ncbi.nlm.nih.gov/pub/clinvar/tab_delimited/variant_summary.txt.gz"
+    format: "tsv"
+    release_cadence: "weekly"
+    licence: "Public Domain (NCBI/NLM terms)"
+    terms_url: "https://www.ncbi.nlm.nih.gov/home/about/policies/"
+    retrieved_date: "2026-11-20"
+    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    expected_columns:
+      - "VariationID"
+      - "GeneSymbol"
+      - "Name"
+      - "ClinicalSignificance"
+      - "ReviewStatus"
+      - "Assembly"
+
+  clingen:
+    name: "ClinGen Gene-Disease Validity"
+    url: "https://search.clinicalgenome.org/kb/gene-validity"
+    format: "csv"
+    release_cadence: "quarterly"
+    licence: "CC0 1.0 Universal"
+    terms_url: "https://clinicalgenome.org/about/terms-of-use/"
+    retrieved_date: "2026-11-20"
+    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    expected_columns:
+      - "gene_symbol"
+      - "disease_label"
+      - "moi"
+      - "classification"
+
+  orphanet:
+    name: "Orphadata Rare Diseases"
+    url: "https://www.orphadata.com/data/xml/en_product1.xml"
+    format: "json"
+    release_cadence: "monthly"
+    licence: "CC BY 4.0"
+    terms_url: "https://www.orphadata.com/terms/"
+    retrieved_date: "2026-11-20"
+    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    expected_columns:
+      - "orpha_code"
+      - "name"
+      - "omim"
+
+  gnomad:
+    name: "gnomAD Population Allele Frequencies (Panel Genes)"
+    url: "https://gnomad.broadinstitute.org/api"
+    format: "json"
+    release_cadence: "annual"
+    licence: "ODC Open Database License (ODbL)"
+    terms_url: "https://gnomad.broadinstitute.org/terms"
+    retrieved_date: "2026-11-20"
+    sha256: "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    expected_columns:
+      - "variant_id"
+      - "population"
+      - "allele_frequency"

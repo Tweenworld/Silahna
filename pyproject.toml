@@ -40,6 +40,7 @@ packages = [
     "src/db",
     "src/web",
     "src/consent",
+    "src/refdata",
 ]
 
 [tool.hatch.build.targets.wheel.sources]

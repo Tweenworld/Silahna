@@ -1,0 +1,22 @@
+[
+  {
+    "variant_id": "15012",
+    "population": "global",
+    "allele_frequency": 0.0028
+  },
+  {
+    "variant_id": "15012",
+    "population": "mid",
+    "allele_frequency": 0.0152
+  },
+  {
+    "variant_id": "7105",
+    "population": "global",
+    "allele_frequency": 0.0074
+  },
+  {
+    "variant_id": "17001",
+    "population": "global",
+    "allele_frequency": 0.0091
+  }
+]

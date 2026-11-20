@@ -59,6 +59,16 @@ class RulePack:
         return self.panel.symbols
 
 
+class RulePackLoader:
+    """Convenience loader for rule packs configured against a content root."""
+
+    def __init__(self, content_root: str | Path = "content") -> None:
+        self.content_root = str(content_root)
+
+    def load_rulepack(self, version: str, *, demo_mode: bool = False) -> RulePack:
+        return load_rulepack(version, content_root=self.content_root, demo_mode=demo_mode)
+
+
 def _load_schema(schema_path: Path) -> dict[str, Any]:
     if not schema_path.is_file():
         raise RulePackError(f"Missing schema file: {schema_path}")
