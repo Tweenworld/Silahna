@@ -574,9 +574,9 @@ def test_no_pgcrypto_and_no_key_taking_functions(
             installed_extensions = [row[0] for row in cur.fetchall()]
             assert "pgcrypto" not in installed_extensions, "pgcrypto MUST NOT be installed"
             # plpgsql is the only standard extension
-            assert installed_extensions == ["plpgsql"], (
-                f"Expected only plpgsql, found: {installed_extensions}"
-            )
+            assert installed_extensions == [
+                "plpgsql"
+            ], f"Expected only plpgsql, found: {installed_extensions}"
 
             # 2. Check audit functions do not take key arguments
             cur.execute(
@@ -621,9 +621,9 @@ def test_audit_get_head_for_update_locks_before_query(
             advisory_lock_idx = source.find("pg_advisory_xact_lock")
             assert lock_timeout_idx != -1, "SET LOCAL lock_timeout must be in function"
             assert advisory_lock_idx != -1, "pg_advisory_xact_lock must be in function"
-            assert lock_timeout_idx < advisory_lock_idx, (
-                "SET LOCAL lock_timeout must precede advisory lock acquisition"
-            )
+            assert (
+                lock_timeout_idx < advisory_lock_idx
+            ), "SET LOCAL lock_timeout must precede advisory lock acquisition"
 
 
 # Gate 16: Python Genesis constant equals SQL table default
@@ -641,9 +641,9 @@ def test_python_genesis_equals_sql_head_default() -> None:
                 row = cur.fetchone()
                 assert row is not None
                 sql_genesis = row[0]
-                assert GENESIS == sql_genesis == "GENESIS", (
-                    f"Mismatch: Python ({GENESIS}) != SQL ({sql_genesis})"
-                )
+                assert (
+                    GENESIS == sql_genesis == "GENESIS"
+                ), f"Mismatch: Python ({GENESIS}) != SQL ({sql_genesis})"
     finally:
         with psycopg.connect(BASE_DB_URL, autocommit=True) as conn:
             conn.execute(
@@ -699,9 +699,9 @@ def test_audit_event_is_last_statement_before_commit(
         # The last executed statement in the transaction before commit MUST be audit.insert_event
         assert len(executed_statements) >= 3
         last_statement = executed_statements[-1]
-        assert "audit.insert_event" in last_statement, (
-            f"Expected audit.insert_event as final statement, got: {last_statement}"
-        )
+        assert (
+            "audit.insert_event" in last_statement
+        ), f"Expected audit.insert_event as final statement, got: {last_statement}"
         assert record.prev_mac == "GENESIS" or len(record.prev_mac) == 64
 
 

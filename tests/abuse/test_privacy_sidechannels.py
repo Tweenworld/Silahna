@@ -11,8 +11,9 @@ def test_access_log_excludes_partner_events() -> None:
     """GET /api/me/access-log must only show user's own accesses
     and never partner consent changes.
     """
-    from db.memory_store import get_store
     from fastapi.testclient import TestClient
+
+    from db.memory_store import get_store
     from web.main import create_app
 
     app = create_app()
@@ -42,8 +43,9 @@ def test_access_log_excludes_partner_events() -> None:
 
 def test_no_notification_on_partner_decline_or_revoke() -> None:
     """Notifications must NEVER be dispatched conditionally when one partner declines or revokes."""
-    from db.memory_store import get_store
     from fastapi.testclient import TestClient
+
+    from db.memory_store import get_store
     from web.main import create_app
 
     app = create_app()
