@@ -52,7 +52,14 @@ jobs:
         run: uv run ruff format --check .
 
       - name: Run Mypy
-        run: uv run mypy src
+        run: |
+          OUT=$(uv run mypy src 2>&1) || {
+            MSG="${OUT//$'\n'/'%0A'}"
+            MSG="${MSG//$'\r'/'%0D'}"
+            echo "::error title=Mypy Failure::$MSG"
+            echo "$OUT"
+            exit 1
+          }
 
       - name: Run Bandit security scanner
         run: uv run bandit -r src -c pyproject.toml
